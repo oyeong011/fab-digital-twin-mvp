@@ -6,33 +6,37 @@
   <title>Fab Digital Twin MVP</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 32px; background:#0f172a; color:#e2e8f0; }
-    .cards { display:grid; grid-template-columns: repeat(4, minmax(140px, 1fr)); gap:16px; margin-bottom:24px; }
+    .cards { display:grid; grid-template-columns: repeat(5, minmax(140px, 1fr)); gap:16px; margin-bottom:24px; }
     .card { background:#111827; padding:16px; border-radius:16px; border:1px solid #334155; }
     table { width:100%; border-collapse:collapse; background:white; color:#111827; border-radius:12px; overflow:hidden; }
-    th, td { padding:10px; border-bottom:1px solid #e5e7eb; text-align:left; font-size:14px; }
+    th, td { padding:10px; border-bottom:1px solid #e5e7eb; text-align:left; font-size:14px; vertical-align:top; }
     th { background:#e2e8f0; }
     .muted { color:#94a3b8; }
+    .footer { margin-top: 16px; color:#cbd5e1; font-size:14px; }
+    code { background:#1e293b; color:#e2e8f0; padding:2px 6px; border-radius:6px; }
   </style>
 </head>
 <body>
   <h1>Fab Digital Twin MVP</h1>
-  <p class='muted'>Generated at 2026-03-16T11:48:44.664971Z</p>
+  <p class='muted'>Generated at 2026-03-16T11:52:27.222838Z · Fab: fab-beta · Schema: 1.1.0</p>
   <div class='cards'>
-    <div class='card'><strong>Total Tools</strong><br>8</div>
+    <div class='card'><strong>Total Tools</strong><br>12</div>
     <div class='card'><strong>Critical</strong><br>2</div>
     <div class='card'><strong>Warning</strong><br>0</div>
-    <div class='card'><strong>Avg Predicted Yield</strong><br>95.23%</div>
+    <div class='card'><strong>Inspect Action</strong><br>0</div>
+    <div class='card'><strong>Avg Predicted Yield</strong><br>95.88%</div>
   </div>
   <table>
     <thead>
       <tr>
         <th>Tool</th><th>Step</th><th>Temp</th><th>Pressure</th><th>Vibration</th>
-        <th>Throughput</th><th>Defect</th><th>Queue</th><th>Health</th><th>Severity</th><th>Action</th><th>Yield</th>
+        <th>Throughput</th><th>Defect</th><th>Queue</th><th>Health</th><th>Severity</th><th>Action</th><th>Yield</th><th>Triggers</th>
       </tr>
     </thead>
     <tbody>
-      <tr style='background:#dcfce7'><td>EQP-01</td><td>deposition</td><td>71.12</td><td>1.222</td><td>0.161</td><td>42.71</td><td>0.0078</td><td>4</td><td>75.96</td><td>normal</td><td>continue</td><td>97.17</td></tr><tr style='background:#dcfce7'><td>EQP-02</td><td>etch</td><td>74.24</td><td>1.275</td><td>0.218</td><td>39.6</td><td>0.0098</td><td>9</td><td>67.99</td><td>normal</td><td>continue</td><td>96.46</td></tr><tr style='background:#fee2e2'><td>EQP-03</td><td>clean</td><td>96.51</td><td>1.866</td><td>0.385</td><td>27.58</td><td>0.0575</td><td>18</td><td>20</td><td>critical</td><td>maintenance</td><td>88.68</td></tr><tr style='background:#dcfce7'><td>EQP-04</td><td>inspection</td><td>66.77</td><td>1.585</td><td>0.182</td><td>33.14</td><td>0.0094</td><td>14</td><td>72.48</td><td>normal</td><td>continue</td><td>96.82</td></tr><tr style='background:#dcfce7'><td>EQP-05</td><td>deposition</td><td>80.64</td><td>1.253</td><td>0.206</td><td>40.18</td><td>0.009</td><td>11</td><td>69.85</td><td>normal</td><td>continue</td><td>96.65</td></tr><tr style='background:#dcfce7'><td>EQP-06</td><td>etch</td><td>88.93</td><td>1.409</td><td>0.239</td><td>38.42</td><td>0.0092</td><td>4</td><td>61.82</td><td>normal</td><td>continue</td><td>95.74</td></tr><tr style='background:#fee2e2'><td>EQP-07</td><td>clean</td><td>79.74</td><td>1.764</td><td>0.26</td><td>26.2</td><td>0.0322</td><td>17</td><td>49.49</td><td>critical</td><td>maintenance</td><td>93.84</td></tr><tr style='background:#dcfce7'><td>EQP-08</td><td>inspection</td><td>74.26</td><td>1.575</td><td>0.217</td><td>34.51</td><td>0.0098</td><td>17</td><td>68.02</td><td>normal</td><td>continue</td><td>96.47</td></tr>
+      <tr style='background:#dcfce7'><td>EQP-01</td><td>deposition</td><td>68.59</td><td>1.172</td><td>0.164</td><td>41.46</td><td>0.0081</td><td>18</td><td>75.47</td><td>normal</td><td>continue</td><td>97.11</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-02</td><td>etch</td><td>77.47</td><td>1.339</td><td>0.185</td><td>37.5</td><td>0.0074</td><td>3</td><td>73.32</td><td>normal</td><td>continue</td><td>97.0</td><td>-</td></tr><tr style='background:#fee2e2'><td>EQP-03</td><td>clean</td><td>91.72</td><td>1.703</td><td>0.339</td><td>28.65</td><td>0.046</td><td>13</td><td>25.52</td><td>critical</td><td>maintenance</td><td>90.82</td><td>defect_rate, health_score, temperature, throughput_wph, vibration</td></tr><tr style='background:#dcfce7'><td>EQP-04</td><td>inspection</td><td>71.11</td><td>1.672</td><td>0.161</td><td>31.82</td><td>0.0078</td><td>15</td><td>75.97</td><td>normal</td><td>continue</td><td>97.17</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-05</td><td>deposition</td><td>81.39</td><td>1.268</td><td>0.214</td><td>40.33</td><td>0.0095</td><td>17</td><td>68.61</td><td>normal</td><td>continue</td><td>96.52</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-06</td><td>etch</td><td>84.3</td><td>1.316</td><td>0.227</td><td>37.61</td><td>0.0083</td><td>3</td><td>67.56</td><td>normal</td><td>continue</td><td>96.49</td><td>-</td></tr><tr style='background:#fee2e2'><td>EQP-07</td><td>clean</td><td>83.2</td><td>1.828</td><td>0.269</td><td>28.89</td><td>0.0508</td><td>10</td><td>37.25</td><td>critical</td><td>maintenance</td><td>91.9</td><td>defect_rate, health_score, pressure, throughput_wph</td></tr><tr style='background:#dcfce7'><td>EQP-08</td><td>inspection</td><td>77.79</td><td>1.646</td><td>0.182</td><td>34.97</td><td>0.0072</td><td>11</td><td>73.86</td><td>normal</td><td>continue</td><td>97.04</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-09</td><td>deposition</td><td>84.78</td><td>1.176</td><td>0.222</td><td>40.87</td><td>0.0079</td><td>9</td><td>67.96</td><td>normal</td><td>continue</td><td>96.52</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-10</td><td>etch</td><td>72.97</td><td>1.409</td><td>0.18</td><td>40.28</td><td>0.0092</td><td>10</td><td>72.9</td><td>normal</td><td>continue</td><td>96.86</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-11</td><td>clean</td><td>79.46</td><td>1.529</td><td>0.195</td><td>36.63</td><td>0.0081</td><td>7</td><td>71.79</td><td>normal</td><td>continue</td><td>96.84</td><td>-</td></tr><tr style='background:#dcfce7'><td>EQP-12</td><td>inspection</td><td>83.17</td><td>1.593</td><td>0.238</td><td>34.44</td><td>0.0091</td><td>3</td><td>65.92</td><td>normal</td><td>continue</td><td>96.35</td><td>-</td></tr>
     </tbody>
   </table>
+  <p class='footer'>Run again with <code>python3 -m fab_sim.app --seed 7 --tools 12</code> to generate a different fab snapshot.</p>
 </body>
 </html>

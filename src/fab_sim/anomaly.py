@@ -2,18 +2,7 @@ from __future__ import annotations
 
 from typing import Dict, List
 
-
-BASELINES = {
-    "temperature": {"mean": 77.0, "std": 6.5},
-    "pressure": {"mean": 1.45, "std": 0.16},
-    "vibration": {"mean": 0.19, "std": 0.05},
-    "throughput_wph": {"mean": 38.0, "std": 5.0},
-    "defect_rate": {"mean": 0.012, "std": 0.01},
-}
-
-
-HIGH_IS_BAD = {"temperature", "pressure", "vibration", "defect_rate"}
-LOW_IS_BAD = {"throughput_wph"}
+from fab_sim.config import BASELINES, HIGH_IS_BAD, LOW_IS_BAD
 
 
 def z_score(value: float, mean: float, std: float) -> float:

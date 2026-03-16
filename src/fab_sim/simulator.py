@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 import random
 from typing import List, Dict
 
+from fab_sim.config import PROCESS_STEPS
+
 
 @dataclass
 class ToolState:
@@ -19,9 +21,6 @@ class ToolState:
     utilization: float
     health_score: float
     timestamp: str
-
-
-PROCESS_STEPS = ["deposition", "etch", "clean", "inspection"]
 
 
 def _bounded(value: float, low: float, high: float) -> float:

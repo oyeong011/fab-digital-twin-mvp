@@ -1,0 +1,2 @@
+# Standard-library-first project.
+# Kept intentionally minimal for easy local execution on Python 3.9+.
