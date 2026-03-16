@@ -1,0 +1,8 @@
+{"event_type": "tool_snapshot", "tool_id": "EQP-01", "severity": "normal", "recommended_action": "continue", "predicted_yield": 97.17, "timestamp": "2026-03-16T11:48:44.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-02", "severity": "normal", "recommended_action": "continue", "predicted_yield": 96.46, "timestamp": "2026-03-16T11:48:49.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-03", "severity": "critical", "recommended_action": "maintenance", "predicted_yield": 88.68, "timestamp": "2026-03-16T11:48:54.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-04", "severity": "normal", "recommended_action": "continue", "predicted_yield": 96.82, "timestamp": "2026-03-16T11:48:59.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-05", "severity": "normal", "recommended_action": "continue", "predicted_yield": 96.65, "timestamp": "2026-03-16T11:49:04.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-06", "severity": "normal", "recommended_action": "continue", "predicted_yield": 95.74, "timestamp": "2026-03-16T11:49:09.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-07", "severity": "critical", "recommended_action": "maintenance", "predicted_yield": 93.84, "timestamp": "2026-03-16T11:49:14.664572Z"}
+{"event_type": "tool_snapshot", "tool_id": "EQP-08", "severity": "normal", "recommended_action": "continue", "predicted_yield": 96.47, "timestamp": "2026-03-16T11:49:19.664572Z"}
