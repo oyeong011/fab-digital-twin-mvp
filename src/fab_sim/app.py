@@ -10,6 +10,7 @@ from fab_sim.anomaly import detect_anomalies
 from fab_sim.decision import recommend_actions
 from fab_sim.dashboard import build_dashboard
 from fab_sim.config import DEFAULT_FAB_NAME, DEFAULT_SCHEMA_VERSION, DEFAULT_SEED, DEFAULT_TOOL_COUNT
+from fab_sim.service import build_event_records, save_event_jsonl, save_tool_csv
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -44,20 +45,8 @@ def generate_snapshot(seed: int, n_tools: int, fab_name: str) -> dict:
 def save_outputs(snapshot: dict, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "snapshot.json").write_text(json.dumps(snapshot, indent=2), encoding="utf-8")
-    with (output_dir / "events.jsonl").open("w", encoding="utf-8") as f:
-        for tool in snapshot["tools"]:
-            f.write(json.dumps({
-                "event_type": "tool_snapshot",
-                "tool_id": tool["tool_id"],
-                "process_step": tool["process_step"],
-                "severity": tool["severity"],
-                "risk_score": tool["risk_score"],
-                "triggered_metrics": tool["triggered_metrics"],
-                "recommended_action": tool["recommended_action"],
-                "predicted_yield": tool["predicted_yield"],
-                "timestamp": tool["timestamp"],
-            }) + "\n")
-
+    save_event_jsonl(build_event_records(snapshot), output_dir / "events.jsonl")
+    save_tool_csv(snapshot, output_dir / "tools.csv")
     (output_dir / "dashboard.html").write_text(build_dashboard(snapshot), encoding="utf-8")
 
 
@@ -80,7 +69,10 @@ def main() -> None:
     warning = [t for t in snapshot["tools"] if t["severity"] == "warning"]
     print("Fab Digital Twin MVP generated.")
     print(f"Tools: {len(snapshot['tools'])}, critical: {len(critical)}, warning: {len(warning)}")
-    print(f"Artifacts: {output_dir / 'snapshot.json'}, {output_dir / 'events.jsonl'}, {output_dir / 'dashboard.html'}")
+    print(
+        f"Artifacts: {output_dir / 'snapshot.json'}, {output_dir / 'events.jsonl'}, "
+        f"{output_dir / 'tools.csv'}, {output_dir / 'dashboard.html'}"
+    )
     for tool in critical:
         print(f"- {tool['tool_id']}: action={tool['recommended_action']}, yield={tool['predicted_yield']}%")
 
